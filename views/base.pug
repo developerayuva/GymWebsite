@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title #{title}
+        block style 
+        block scripts
+    body
+        nav#nav 
+            ul
+                div 
+                    img(src="img/img4.jpg")
+                li #[a(href="/") Home]
+                li #[a(href="/aboutus") About us]
+                li #[a(href="/schedules") Schedules]
+                li #[a(href="/register") Register]
+        block content
+        hr
+        footer#footer 
+            address 
+                |Vila No. 46, first floor
+                br
+                |Shahid Bhagat Singh Marg
+                br
+                |Mumbai, 400023
+                br
+                |Phone No. - 9999999999
+                br
+                a(href="mailto:fitnesszone@gmail.com") Send us Mail
+            div
+                |&#169 Fitness Zone
+                br
+                |All Rights Reserved
+        hr

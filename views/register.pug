@@ -1,0 +1,29 @@
+extends base.pug
+
+block scripts
+    script(src='../static/index.js')
+
+block style 
+    style 
+        include ../static/style.css
+
+block content
+    h1#headingregister Please Register yourself in Fitness Zone
+    form(action="/register" class="myform" method="post")
+        input(type="text" class="myInput" name="name" required="required" placeholder="Enter your Name")
+        input(type="tel" class="myInput" name="telephone" maxlength="10" required="required" placeholder="Enter your Phone number")
+        input(type="email" class="myInput" name="email" required="required" placeholder="Enter your E-Mail")
+        input(type="number" class="myInput" name="age" required="required" placeholder="Enter your Age")
+        div#radio
+            div
+                input(type="radio" name="gender" value="Male" checked)
+                label.gender(for="male") Male
+            div
+                input(type="radio" name="gender" value="Female")
+                label.gender(for="female") Female
+        label#dob(for="dob" class="myInput") Enter your Date of Birth
+        input(type="date" class="myInput" name="dob")
+        textarea(name="about" class="myInput" rows=10 cols=10 placeholder="Describe about you allergies if any?")
+        div#submitreset
+            input(type="submit" value="Submit")
+            input(type="reset" value="Reset")
